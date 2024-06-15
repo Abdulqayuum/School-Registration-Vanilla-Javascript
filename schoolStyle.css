@@ -1,0 +1,289 @@
+:root{
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-black: hsl(252, 30%, 10%);
+    --color-dark: hsl(252, 30%, 17%);
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);    
+}
+
+/*GENERAL STYLES*/
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.photo{
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img{
+    display: block;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover{
+    opacity: 0.8;   
+}
+
+.btn-primary{
+    background: var(--color-primary);
+    color: white;
+}
+
+.text-bold{
+    font-weight: 500;
+}
+
+.text-muted{
+    color: var(--color-gray);
+}
+
+
+/*================= NAVABAR =================*/
+nav{
+    width: 100%;
+    background: var(--color-white);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .search-bar{
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+
+nav .search-bar input[type="search"]{
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 10px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: var(--color-light);
+    float: right;
+    font-size: 38px;
+    position: relative;
+    top: -5px;
+    right: 5px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* FORM STYLES */
+
+.header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #006699;
+}
+.brand-logo {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.form-container {
+    width: 100%;
+    margin: 30px auto;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 10px;
+}
+label {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+input[type="text"],
+input[type="date"],
+input[type="file"],
+input[type="number"],
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.radio-group {
+    margin: 10px 0;
+}
+input[type="radio"] {
+    margin-right: 5px;
+}
+.btn-submit {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.btn-submit:hover {
+    background-color: #006699;
+    color: white;
+}
+.signature {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*========= TABLE STYLES ==========*/
+  table {
+    position: relative;
+    top: 7rem;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 5px;
+    margin: 0;
+  }
+  
+  th {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+  }
+  
+  .heart-btn {
+    color: blue;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .edit-btn {
+    margin: 0;
+    color: blue;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+  }
+  
+  .edit-btn:hover {
+    margin: 0;
+    color: rgb(0, 0, 0);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+  }
+
+  .delete-btn {
+    margin: 0;
+    color: rgb(0, 17, 255);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+  }
+  .delete-btn:hover {
+    color: rgb(255, 0, 55);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+  }
+  /* Add more CSS to style the buttons and table as per your design requirements */
+  

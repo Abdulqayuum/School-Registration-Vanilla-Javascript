@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="schoolStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h2 class="log">
+                Student Registration
+            </h2>
+            <div class="search-bar">
+                <input type="search" placeholder="search students...." id="searchInput">
+            </div>
+            <div class="AddBtn">
+                <label for="create-post" class="btn btn-primary" id="addBtn">Add New Student</label>
+            </div>
+            <div>
+                <!-- Export / import data-->
+                <button  id="exportButton" class="btn">Export Data</button>
+                <input type="file" id="importInput" style="display: none;">
+                <button  id="importButton" class="btn btn-primary">Import Data</button>
+              </div>
+        </div>
+    </nav>
+
+
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <!-- Put your form code here, inside the modal-content div -->
+
+    <div class="header">
+        <div class="brand-logo"></div>
+        <h1>REGISTRATION FORM</h1>
+    </div>
+    
+    <div class="form-container">            
+    
+            <h2 id="modalTitle">PERSONAL INFORMATION</h2>
+    
+            <div class="form-group">
+                <input type="hidden" id="productId">
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image">                
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                <label for="guardian-name">Guardian Name:</label>
+                <input type="text" id="guardian-name" name="guardian-name">
+                <label for="cell-number">Cell Number:</label>
+                <input type="number" id="cell-number" name="cell-number">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+                <label for="className">Class:</label>
+                <input type="text" id="className" name="className">
+            </div>
+    
+            <!-- Add more input fields as per the design -->
+    
+            <!--div class="form-group">
+                <label for="signature">Applicant Signature Here:</label>
+                <input type="text" id="signature" name="signature" class="form-control">
+            </div-->
+    
+            <!--div class="form-group signature">
+                <label for="validated">Validated By:</label>
+                <input type="text" id="validated" name="validated" class="form-control">
+            </div-->
+    
+            <button class="btn-submit" id="btn-submit">Submit</button>
+        
+    </div>
+
+
+    </div>
+
+</div>
+    <!--------- TABLE ---------->
+
+    <table id="infoStudent">
+        <thead>
+          <th>Student ID</th>
+          <th>Image</th>
+          <th>Student Name</th>
+          <th>Date of Birth</th>
+          <th>Guardian Name</th>
+          <th>Cell Number</th>
+          <th>Address</th>
+          <th>Class</th>
+          <th>Action</th>
+        </thead>
+        <tbody>
+        <!--tr>
+          <td>1</td>
+          <td>no Image</td>
+          <td>Abdulaqayum</td>
+          <td>1/1/1999</td>
+          <td>Moahmed</td>
+          <td>0908765544</td>
+          <td>Bosaso</td>
+          <td>2023/2024</td>
+          <td>
+            <button class="edit-btn">✎</button>
+            <button class="delete-btn">🗑</button>
+          </td>
+        </tr-->
+        </tbody>
+        <!-- Repeat <tr> for each item -->
+      </table>
+  
+
+
+
+    <script src="schoolScript.js"></script>
+</body>
+</html>
